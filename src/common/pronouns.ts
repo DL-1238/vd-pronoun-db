@@ -88,7 +88,7 @@ export default {
          * Fetch the @arg unfiltered list of @arg pronouns with the @arg ids placed into the template literal string.
          */
         const unfilteredPronounRes = await(
-            await fetch(`https://pronoundb.org/api/v1/lookup-bulk?platform=discord&ids=${ids.join(",")}`, {
+            await fetch(`https://pronoundb.org/api/v2/lookup-bulk?platform=discord&ids=${ids.join(",")}`, {
                 method: "GET",
                 headers: { "Accept": "application/json", "X-PronounDB-Source": "Vendetta" }
             })
